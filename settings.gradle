@@ -1,0 +1,3 @@
+rootProject.name='TCG Pokemon'
+include ':app'
+include ':libraries:ui_components'
