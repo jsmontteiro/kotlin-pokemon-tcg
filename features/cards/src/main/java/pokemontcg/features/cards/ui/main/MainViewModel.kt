@@ -3,10 +3,10 @@ package pokemontcg.features.cards.ui.main
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import pokemontcg.features.cards.model.Card
-import pokemontcg.features.cards.usecase.ListCardsuseCase
+import pokemontcg.features.cards.usecase.ListCardsUseCase
 import pokemontcg.libraries.ui_components.BaseViewModel
 
-internal class MainViewModel : BaseViewModel() {
+internal class MainViewModel(private val listCardsUseCase: ListCardsUseCase) : BaseViewModel() {
 
     private val _cards = MutableLiveData<List<Card>>()
     val cards: LiveData<List<Card>> = _cards
@@ -17,7 +17,7 @@ internal class MainViewModel : BaseViewModel() {
         if (!isInitialized) {
             isInitialized = true
             doAsyncWork {
-                _cards.value = ListCardsuseCase().execute(null)
+                _cards.value = listCardsUseCase.execute(null)
             }
         }
     }

@@ -11,4 +11,6 @@ dependencies {
     implementation deps.glide
     implementation deps.lifecycleKtx
     implementation deps.viewModelKtx
+    implementation deps.koin
+    implementation deps.koinViewModel
 }
