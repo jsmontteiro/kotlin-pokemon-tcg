@@ -8,8 +8,8 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.cards_item_card.view.*
 import pokemontcg.features.cards.R
+import pokemontcg.features.cards.model.Card
 import pokemontcg.features.cards.ui.extensions.loadImage
-import pokemontcg.features.cards.ui.model.Card
 
 internal class CardsAdapter : ListAdapter<Card, CardsAdapter.ViewHolder>(DIFF_UTIL) {
 

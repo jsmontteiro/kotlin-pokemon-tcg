@@ -1,6 +1,6 @@
-package pokemontcg.features.cards.ui.data.network
+package pokemontcg.features.cards.data.network
 
-import pokemontcg.features.cards.ui.data.network.schemas.ListCardResponseSchema
+import pokemontcg.features.cards.data.network.schemas.ListCardResponseSchema
 import retrofit2.Response
 import retrofit2.http.GET
 

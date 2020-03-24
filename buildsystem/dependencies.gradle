@@ -19,6 +19,7 @@ ext {
     dependencies = [
             kotlin               : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}",
             kotlinExtensions     : "androidx.core:core-ktx:${versions.kotlinExtensions}",
+            viewModelKtx         : "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycle}",
             constraintLayout     : "androidx.constraintlayout:constraintlayout:${versions.constraintLayout}",
             appCompat            : "androidx.appcompat:appcompat:${versions.appCompat}",
             material             : "com.google.android.material:material:${versions.material}",

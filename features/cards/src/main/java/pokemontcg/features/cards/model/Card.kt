@@ -1,4 +1,4 @@
-package pokemontcg.features.cards.ui.model
+package pokemontcg.features.cards.model
 
 internal data class Card (
     val id: String,

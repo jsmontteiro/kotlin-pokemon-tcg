@@ -1,4 +1,4 @@
-package pokemontcg.features.cards.ui.data.network.schemas
+package pokemontcg.features.cards.data.network.schemas
 
 import com.google.gson.annotations.SerializedName
 
