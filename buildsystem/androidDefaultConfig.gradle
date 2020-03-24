@@ -1,10 +1,10 @@
 if (project.hasProperty('android')) {
     project.plugins.apply("kotlin-android")
-    project.plugins.apply("jacoco")
+    project.plugins.apply("kotlin-android-extensions")
 
     android {
         compileSdkVersion 29
-        buildToolsVersion "29.0.2"
+        buildToolsVersion "29.0.3"
         defaultConfig {
             minSdkVersion 21
             targetSdkVersion 29
@@ -19,6 +19,12 @@ if (project.hasProperty('android')) {
             debug {
             }
         }
+
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+
 
         resourcePrefix "${project.name}_"
     }

@@ -8,20 +8,25 @@ ext {
             jUnit                 : '4.12',
             material              : '1.1.0-rc02',
 
-            retrofit              : '2.7.1',
+            retrofit              : '2.7.2',
             gson                  : '2.8.6',
-            httpLoggingInterceptor: '4.3.1'
+            httpLoggingInterceptor: '4.3.1',
+
+            glide                 : "4.11.0",
+            lifecycle             : '2.2.0'
     ]
 
     dependencies = [
-            kotlin                : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}",
-            kotlinExtensions      : "androidx.core:core-ktx:${versions.kotlinExtensions}",
-            constraintLayout      : "androidx.constraintlayout:constraintlayout:${versions.constraintLayout}",
-            appCompat             : "androidx.appcompat:appcompat:${versions.appCompat}",
-            material              : "com.google.android.material:material:${versions.material}",
-            retrofit              : "com.squareup.retrofit2:retrofit:${versions.retrofit}",
-            gson                  : "com.google.code.gson:gson:${versions.gson}",
-            retrofitGsonConverter : "com.squareup.retrofit2:converter-gson:${versions.retrofit}"
+            kotlin               : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}",
+            kotlinExtensions     : "androidx.core:core-ktx:${versions.kotlinExtensions}",
+            constraintLayout     : "androidx.constraintlayout:constraintlayout:${versions.constraintLayout}",
+            appCompat            : "androidx.appcompat:appcompat:${versions.appCompat}",
+            material             : "com.google.android.material:material:${versions.material}",
+            retrofit             : "com.squareup.retrofit2:retrofit:${versions.retrofit}",
+            gson                 : "com.google.code.gson:gson:${versions.gson}",
+            retrofitGsonConverter: "com.squareup.retrofit2:converter-gson:${versions.retrofit}",
+            glide                : "com.github.bumptech.glide:glide:${versions.glide}",
+            lifecycleKtx         : "androidx.lifecycle:lifecycle-runtime-ktx:${versions.lifecycle}",
     ]
 
     testDependencies = [
