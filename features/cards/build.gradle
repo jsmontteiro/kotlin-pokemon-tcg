@@ -1,16 +1,21 @@
+
 apply plugin: 'com.android.library'
 apply from: rootProject.file('buildsystem/androidDefaultConfig.gradle')
 
 dependencies {
     def deps = rootProject.ext.dependencies
+    def testDeps = rootProject.ext.testDependencies
 
     implementation project(":libraries:ui_components")
     implementation project(":libraries:network")
     implementation project(":libraries:common")
+
     implementation deps.appCompat
-    implementation deps.glide
     implementation deps.lifecycleKtx
-    implementation deps.viewModelKtx
+    implementation deps.glide
     implementation deps.koin
     implementation deps.koinViewModel
+
+    testImplementation project(":libraries:testutils")
+    testImplementation testDeps.koinTest
 }

@@ -1,6 +1,4 @@
-package mobile.libraries.network.exceptions
+package pokemontcg.libraries.network.exceptions
 
-import pokemontcg.libraries.network.exceptions.MyNetworkException
-
-
-class ServerErrorException(message: String?, cause: Throwable? = null) : MyNetworkException(message, cause)
+class ServerErrorException(message: String? = null, cause: Throwable? = null) :
+    MyNetworkException(message, cause)

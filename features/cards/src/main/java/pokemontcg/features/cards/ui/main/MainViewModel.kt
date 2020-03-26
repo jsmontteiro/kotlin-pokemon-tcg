@@ -11,13 +11,14 @@ internal class MainViewModel(private val listCardsUseCase: ListCardsUseCase) : B
     private val _cards = MutableLiveData<List<Card>>()
     val cards: LiveData<List<Card>> = _cards
 
-    private var isInitialized = false
+    var isInitialized = false
+        private set
 
-    init {
+    fun init() {
         if (!isInitialized) {
-            isInitialized = true
             doAsyncWork {
                 _cards.value = listCardsUseCase.execute(null)
+                isInitialized = true
             }
         }
     }

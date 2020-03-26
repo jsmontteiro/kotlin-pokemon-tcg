@@ -10,6 +10,7 @@ import pokemontcg.libraries.ui_components.extensions.createLoadingDialog
 import pokemontcg.libraries.ui_components.extensions.showMessage
 
 class MainActivity : AppCompatActivity() {
+
     private val cardsAdapter = CardsAdapter()
     private val viewModel: MainViewModel by viewModel()
 
@@ -21,16 +22,20 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.cards_activity_main)
 
-
         setupView()
-        setupObserver()
+        setupObservers()
+
+        viewModel.init()
     }
 
     private fun setupView() {
         main_rvCards.adapter = cardsAdapter
     }
 
-    private fun setupObserver() {
+    private fun setupObservers() {
+        viewModel.cards.observe(this, Observer {
+            cardsAdapter.submitList(it)
+        })
 
         viewModel.showError.observe(this, Observer { showMessage(it) })
 
@@ -39,11 +44,9 @@ class MainActivity : AppCompatActivity() {
                 loadingDialog.show()
             else
                 loadingDialog.hide()
-        })
 
-        viewModel.cards.observe(this, Observer {
-            cardsAdapter.submitList(it)
         })
     }
+
 
 }

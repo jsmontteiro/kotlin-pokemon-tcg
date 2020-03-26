@@ -1,9 +1,9 @@
 package pokemontcg.libraries.network
 
-import android.util.Log
-import mobile.libraries.network.exceptions.ServerErrorException
 import pokemontcg.libraries.network.exceptions.MyNetworkException
+import pokemontcg.libraries.network.exceptions.ServerErrorException
 import retrofit2.Response
+import timber.log.Timber
 
 object RequestManager {
     suspend fun <T> requestFromApi(
@@ -24,7 +24,7 @@ object RequestManager {
             }
 
         } catch (e: Exception) {
-            Log.e("RequestManager", "Request error: ${e.message}", e)
+            Timber.e(e, "RequestManager Request error: ${e.message}")
             throw e
         }
     }

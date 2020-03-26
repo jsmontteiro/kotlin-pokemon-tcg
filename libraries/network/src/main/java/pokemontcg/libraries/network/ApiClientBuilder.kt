@@ -1,6 +1,5 @@
 package pokemontcg.libraries.network
 import com.google.gson.Gson
-import com.google.gson.GsonBuilder
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import pokemontcg.libraries.network.interceptors.BasicLoggerInterceptor
@@ -9,9 +8,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiClientBuilder {
     private val baseClient = OkHttpClient.Builder().build()
-    private val gsonDefault = GsonBuilder()
-        .setDateFormat("yyyy-MM-dd'T'HH:mm:ss")
-        .create()
 
     private val defaultUrl = "https://api.pokemontcg.io/v1/"
 
